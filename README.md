@@ -11,7 +11,7 @@
 ## 安装
 
 1. 安装 golang，然后获取并编译 `go get -u github.com/b3log/lute-http`，编译成功后将生成名为 `lute-http` 的可执行文件
-2. 在启动 Solo、Pipe、Sym 前启动 Lute HTTP 即可
+2. 启动 lute-http 后再启动 Solo、Pipe、Sym 即可，如果成功的话启动日志中会输出 `[Lute] is available`
 3. 你可能需要 [nohup](https://hacpai.com/man?cmd=nohup) 和 `&` 让进程在后台运行：`nohup ./lute-http > lute-http.log 2>&1 &`
 
 ## 授权

@@ -22,7 +22,7 @@
 
 Lute HTTP 使用 [木兰宽松许可证, 第1版](http://license.coscl.org.cn/MulanPSL) 开源协议。
 
-## 🙏 鸣谢
+## 鸣谢
 
 * [Lute](https://github.com/b3log/lute)：一款结构化的 Markdown 引擎，支持 Go 和 JavaScript
 * [fasthttp](https://github.com/valyala/fasthttp)：用 golang 写的高性能 HTTP 实现

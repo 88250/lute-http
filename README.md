@@ -13,6 +13,16 @@
 
 ## 使用
 
+可通过如下任意一种方式使用 Lute HTTP，建议通过 Docker 使用，方便运维。
+
+### Docker
+
+1. 获取最新镜像 `docker pull b3log/lute-http`
+2. 启动容器 `docker run --detach --rm --network=host b3log/lute-http`
+3. 容器启动成功后再启动 Solo、Pipe、Sym 即可，如果成功的话 Solo 等的启动日志中会输出 `[Lute] is available`
+
+### 可执行文件
+
 1. 安装 golang，然后获取并编译 `go get -u github.com/b3log/lute-http`
 2. 编译成功后将在 ${GOPATH}/bin 下生成名为 `lute-http` 的可执行文件
 3. 启动 lute-http 后再启动 Solo、Pipe、Sym 即可，如果成功的话 Solo 等的启动日志中会输出 `[Lute] is available`

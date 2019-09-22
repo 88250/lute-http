@@ -8,7 +8,7 @@
 
 该项目主要是为了：
 
-* 让不同编程语言编写的应用能够复用标准的（符合 GFM/CommonMark） Markdown 渲染  
+* 让不同编程语言编写的应用能够复用标准的（符合 GFM/CommonMark）Markdown 渲染
 * 为 [Sym](https://github.com/b3log/symphony)、[Solo](https://github.com/b3log/solo)、[Pipe](https://github.com/b3log/pipe) 提供更好的 Markdown 渲染，解决各项目内建的 Markdown 渲染不统一的问题
 
 ## 使用
@@ -26,3 +26,4 @@ Lute HTTP 使用 [木兰宽松许可证, 第1版](http://license.coscl.org.cn/Mu
 
 * [Lute](https://github.com/b3log/lute)：一款结构化的 Markdown 引擎，支持 Go 和 JavaScript
 * [fasthttp](https://github.com/valyala/fasthttp)：用 golang 写的高性能 HTTP 实现
+* [Gulu](https://github.com/b3log/gulu)：Go 语言常用工具库

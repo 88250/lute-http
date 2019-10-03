@@ -1,7 +1,7 @@
 // Lute HTTP - HTTP Server for Lute.
 // Copyright (c) 2019-present, b3log.org
 //
-// Lute is licensed under the Mulan PSL v1.
+// Lute HTTP is licensed under the Mulan PSL v1.
 // You can use this software according to the terms and conditions of the Mulan PSL v1.
 // You may obtain a copy of Mulan PSL v1 at:
 //     http://license.coscl.org.cn/MulanPSL

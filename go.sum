@@ -16,8 +16,8 @@ github.com/alecthomas/repr v0.0.0-20181024024818-d37bc2a10ba1 h1:GDQdwm/gAcJcLAK
 github.com/alecthomas/repr v0.0.0-20181024024818-d37bc2a10ba1/go.mod h1:xTS7Pm1pD1mvyM075QCDSRqH6qRLXylzS24ZTpRiSzQ=
 github.com/b3log/gulu v0.0.0-20191005014953-517be3743c77 h1:bJe4OZ1LxtK7lCa0PYiVq5qiYKwIL70J8RGS7R0POOE=
 github.com/b3log/gulu v0.0.0-20191005014953-517be3743c77/go.mod h1:UmyB0pe8jv1K3dZy/4UE3uCpM8zYkB4nbiIgjemuQ7A=
-github.com/b3log/lute v0.0.0-20191109051442-3ee4be64a4a9 h1:3dYIU2nbBoEHF44oDtKDP2qGexeisdizH3F8KxwsrxQ=
-github.com/b3log/lute v0.0.0-20191109051442-3ee4be64a4a9/go.mod h1:cGCDGjKsEzACW2cn2zkFx+NfvnRkLIByKOvTzS2C4yE=
+github.com/b3log/lute v0.0.0-20191110070829-e75a04e6e0d8 h1:7kKpWthSspzAqZiSKQZXVjO0UP3nsOfI/P+tlh2e/XM=
+github.com/b3log/lute v0.0.0-20191110070829-e75a04e6e0d8/go.mod h1:cGCDGjKsEzACW2cn2zkFx+NfvnRkLIByKOvTzS2C4yE=
 github.com/daaku/go.zipexe v1.0.0/go.mod h1:z8IiR6TsVLEYKwXAoE/I+8ys/sDkgTzSL0CLnGVd57E=
 github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964 h1:y5HC9v93H5EPKqaS1UYVg1uYah5Xf51mBfIoWehClUQ=
 github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964/go.mod h1:Xd9hchkHSWYkEqJwUGisez3G1QY8Ryz0sdWrLPMGjLk=

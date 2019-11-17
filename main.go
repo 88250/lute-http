@@ -68,7 +68,7 @@ func handle(ctx *fasthttp.RequestCtx) {
 func main() {
 	gulu.Log.SetLevel("debug")
 
-	addr := "127.0.0.1:8249"
+	addr := ":8249"
 	logger.Infof("booting Lute HTTP Server on [%s]", addr)
 	server := &fasthttp.Server{
 		Handler:            handle,

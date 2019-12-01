@@ -15,8 +15,8 @@ package main
 import (
 	"os"
 
-	"github.com/b3log/gulu"
-	"github.com/b3log/lute"
+	"github.com/88250/gulu"
+	"github.com/88250/lute"
 	"github.com/valyala/fasthttp"
 )
 

@@ -69,7 +69,7 @@ func main() {
 	gulu.Log.SetLevel("debug")
 
 	addr := ":8249"
-	logger.Infof("booting Lute HTTP Server on [%s]", addr)
+	logger.Infof("booting Lute HTTP on [%s]", addr)
 	server := &fasthttp.Server{
 		Handler:            handle,
 		MaxRequestBodySize: 1024 * 1024 * 2, // 2MB

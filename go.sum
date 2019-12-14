@@ -1,7 +1,7 @@
 github.com/88250/gulu v0.0.0-20191130041802-4455e25d91d9 h1:8hewQs1pRYnZT9rR8y+uNbj9G5R6jLcbOc+nEjZqklA=
 github.com/88250/gulu v0.0.0-20191130041802-4455e25d91d9/go.mod h1:a2POIziN+QFeNT4Mj7FHH2lz1HEaFlMRF6wPE0NHM4U=
-github.com/88250/lute v0.0.0-20191213031240-e0fbdf931c6c h1:IrRTBeaSPfp4Psf31qMqiNUu0LzrJaR/k0BT5z1r6Xc=
-github.com/88250/lute v0.0.0-20191213031240-e0fbdf931c6c/go.mod h1:ghREMsAvWGEeOlXrLDfyfKg8T9To409O+EcHMli/Wqc=
+github.com/88250/lute v0.0.0-20191214074940-29977aba0016 h1:QpfqiYcowbnUAcKjWb2/FfyZHGi1rpVwyM/OGZfILqA=
+github.com/88250/lute v0.0.0-20191214074940-29977aba0016/go.mod h1:ghREMsAvWGEeOlXrLDfyfKg8T9To409O+EcHMli/Wqc=
 github.com/GeertJohan/go.incremental v1.0.0/go.mod h1:6fAjUhbVuX1KcMD3c8TEgVUqmo4seqhv0i0kdATSkM0=
 github.com/GeertJohan/go.rice v1.0.0/go.mod h1:eH6gbSOAUv07dQuZVnBmoDP8mgsM1rtixis4Tib9if0=
 github.com/akavel/rsrc v0.8.0/go.mod h1:uLoCtb9J+EyAqh+26kdrTgmzRBFPGOolLWKpdxkKq+c=

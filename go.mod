@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/88250/gulu v0.0.0-20191221090949-7ec528e17061
-	github.com/88250/lute v0.0.0-20191231082608-99560c0cf8a1
+	github.com/88250/lute v0.0.0-20191231090059-ed6a042e7b17
 	github.com/klauspost/compress v1.9.5 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect

@@ -1,7 +1,7 @@
 github.com/88250/gulu v0.0.0-20191221090949-7ec528e17061 h1:4s1RtnI6MF8Z0jJr1hiBZJd+FhCh5QkGY33uUNpnOlI=
 github.com/88250/gulu v0.0.0-20191221090949-7ec528e17061/go.mod h1:a2POIziN+QFeNT4Mj7FHH2lz1HEaFlMRF6wPE0NHM4U=
-github.com/88250/lute v0.0.0-20200109164411-d82a2ba83be0 h1:DHqnIS7X/dEl7i2blqjdix/DA/SwFIYgQqJAgPvMA78=
-github.com/88250/lute v0.0.0-20200109164411-d82a2ba83be0/go.mod h1:a3i6I4g7TM17LjNdILVU3E0Affbm3iTpqi0i7goOsLU=
+github.com/88250/lute v0.0.0-20200117164217-ede7de4b5a81 h1:nSAYSxm867niQuHD9v21exbkwtl3/oz7oi91UF5g9BA=
+github.com/88250/lute v0.0.0-20200117164217-ede7de4b5a81/go.mod h1:a3i6I4g7TM17LjNdILVU3E0Affbm3iTpqi0i7goOsLU=
 github.com/alecthomas/assert v0.0.0-20170929043011-405dbfeb8e38 h1:smF2tmSOzy2Mm+0dGI2AIUHY+w0BUc+4tn40djz7+6U=
 github.com/alecthomas/assert v0.0.0-20170929043011-405dbfeb8e38/go.mod h1:r7bzyVFMNntcxPZXK3/+KdruV1H5KSlyVY0gc+NgInI=
 github.com/alecthomas/chroma v0.7.1 h1:G1i02OhUbRi2nJxcNkwJaY/J1gHXj9tt72qN6ZouLFQ=
@@ -62,6 +62,8 @@ golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5h
 golang.org/x/sys v0.0.0-20191026070338-33540a1f6037/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200107162124-548cf772de50 h1:YvQ10rzcqWXLlJZ3XCUoO25savxmscf4+SC+ZqiCHhA=
 golang.org/x/sys v0.0.0-20200107162124-548cf772de50/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/sys v0.0.0-20200117145432-59e60aa80a0c h1:gUYreENmqtjZb2brVfUas1sC6UivSY8XwKwPo8tloLs=
+golang.org/x/sys v0.0.0-20200117145432-59e60aa80a0c/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 golang.org/x/text v0.3.2 h1:tW2bmiBqwgJj/UpqtC8EpXEZVYOwU0yG4iWbprSVAcs=
 golang.org/x/text v0.3.2/go.mod h1:bEr9sfX3Q8Zfm5fL9x+3itogRgK3+ptLWKqgva+5dAk=

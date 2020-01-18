@@ -28,6 +28,10 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
 
 	engine := lute.New()
+	codeSyntaxHighlightLineNum := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum"))
+	if "true" == codeSyntaxHighlightLineNum {
+		engine.CodeSyntaxHighlightLineNum = true
+	}
 	html, err := engine.Markdown("", body)
 	if nil != err {
 		ctx.SetStatusCode(fasthttp.StatusInternalServerError)

@@ -70,7 +70,7 @@ func handle(ctx *fasthttp.RequestCtx) {
 
 // Lute 的 HTTP Server 入口点。
 func main() {
-	gulu.Log.SetLevel("debug")
+	gulu.Log.SetLevel("info")
 
 	addr := ":8249"
 	logger.Infof("booting Lute HTTP on [%s]", addr)

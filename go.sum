@@ -1,7 +1,7 @@
 github.com/88250/gulu v0.0.0-20191221090949-7ec528e17061 h1:4s1RtnI6MF8Z0jJr1hiBZJd+FhCh5QkGY33uUNpnOlI=
 github.com/88250/gulu v0.0.0-20191221090949-7ec528e17061/go.mod h1:a2POIziN+QFeNT4Mj7FHH2lz1HEaFlMRF6wPE0NHM4U=
-github.com/88250/lute v1.0.1-0.20200122135241-b1b437c541d1 h1:0WEVPubEXHzGwJ7HklYhxdAq5pIzzhbMlYr6Ik0gGnw=
-github.com/88250/lute v1.0.1-0.20200122135241-b1b437c541d1/go.mod h1:a3i6I4g7TM17LjNdILVU3E0Affbm3iTpqi0i7goOsLU=
+github.com/88250/lute v1.0.1-0.20200124064802-e8e8dcc57688 h1:POAierYDyv5Pd9BBkB2OpKCGQprtRA9C6Sa/qG1fD6c=
+github.com/88250/lute v1.0.1-0.20200124064802-e8e8dcc57688/go.mod h1:a3i6I4g7TM17LjNdILVU3E0Affbm3iTpqi0i7goOsLU=
 github.com/alecthomas/assert v0.0.0-20170929043011-405dbfeb8e38 h1:smF2tmSOzy2Mm+0dGI2AIUHY+w0BUc+4tn40djz7+6U=
 github.com/alecthomas/assert v0.0.0-20170929043011-405dbfeb8e38/go.mod h1:r7bzyVFMNntcxPZXK3/+KdruV1H5KSlyVY0gc+NgInI=
 github.com/alecthomas/chroma v0.7.1 h1:G1i02OhUbRi2nJxcNkwJaY/J1gHXj9tt72qN6ZouLFQ=
@@ -78,3 +78,5 @@ gopkg.in/yaml.v2 v2.2.2/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
 gopkg.in/yaml.v2 v2.2.4/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
 gopkg.in/yaml.v2 v2.2.7 h1:VUgggvou5XRW9mHwD/yXxIYSMtY0zoKQf/v226p2nyo=
 gopkg.in/yaml.v2 v2.2.7/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
+gopkg.in/yaml.v2 v2.2.8 h1:obN1ZagJSUGI0Ek/LBmuj4SNLPfIny3KsKFopxRdj10=
+gopkg.in/yaml.v2 v2.2.8/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=

@@ -32,6 +32,10 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	if "true" == codeSyntaxHighlightLineNum {
 		engine.CodeSyntaxHighlightLineNum = true
 	}
+	toc := string(ctx.Request.Header.Peek("X-ToC"))
+	if "true" == toc {
+		engine.ToC = true
+	}
 	html, err := engine.Markdown("", body)
 	if nil != err {
 		ctx.SetStatusCode(fasthttp.StatusInternalServerError)

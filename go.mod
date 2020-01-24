@@ -3,8 +3,8 @@ module github.com/88250/lute-http
 go 1.12
 
 require (
-	github.com/88250/gulu v0.0.0-20191221090949-7ec528e17061
-	github.com/88250/lute v1.0.1-0.20200124080207-82b679808f04
+	github.com/88250/gulu v1.0.0
+	github.com/88250/lute v1.1.0
 	github.com/klauspost/compress v1.9.8 // indirect
 	github.com/mattn/go-isatty v0.0.12 // indirect
 	github.com/valyala/fasthttp v1.8.0

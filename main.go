@@ -28,26 +28,53 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
 
 	engine := lute.New()
-	if "true" == string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum")) {
+
+	CodeSyntaxHighlightLineNum := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum"))
+	if "true" == CodeSyntaxHighlightLineNum {
 		engine.CodeSyntaxHighlightLineNum = true
-	}
-	if "true" == string(ctx.Request.Header.Peek("X-ToC")) {
-		engine.ToC = true
+	} else if "false" == CodeSyntaxHighlightLineNum {
+		engine.CodeSyntaxHighlightLineNum = false
 	}
 
-	if "false" == string(ctx.Request.Header.Peek("X-Footnotes")) {
+	ToC := string(ctx.Request.Header.Peek("X-ToC"))
+	if "true" == ToC {
+		engine.ToC = true
+	} else if "false" == ToC {
+		engine.ToC = false
+	}
+
+	Footnotes := string(ctx.Request.Header.Peek("X-Footnotes"))
+	if "true" == Footnotes {
+		engine.Footnotes = true
+	} else if "false" == Footnotes {
 		engine.Footnotes = false
 	}
-	if "false" == string(ctx.Request.Header.Peek("X-AutoSpace")) {
+
+	AutoSpace := string(ctx.Request.Header.Peek("X-AutoSpace"))
+	if "true" == AutoSpace {
+		engine.AutoSpace = true
+	} else if "false" == AutoSpace {
 		engine.AutoSpace = false
 	}
-	if "false" == string(ctx.Request.Header.Peek("X-FixTermTypo")) {
+
+	FixTermTypo := string(ctx.Request.Header.Peek("X-FixTermTypo"))
+	if "true" == FixTermTypo {
+		engine.FixTermTypo = true
+	} else if "false" == FixTermTypo {
 		engine.FixTermTypo = false
 	}
-	if "false" == string(ctx.Request.Header.Peek("X-ChinesePunct")) {
+
+	ChinesePunct := string(ctx.Request.Header.Peek("X-ChinesePunct"))
+	if "true" == ChinesePunct {
+		engine.ChinesePunct = true
+	} else if "false" == ChinesePunct {
 		engine.ChinesePunct = false
 	}
-	if "false" == string(ctx.Request.Header.Peek("X-IMADAOM")) {
+
+	IMADAOM := string(ctx.Request.Header.Peek("X-IMADAOM"))
+	if "true" == IMADAOM {
+		engine.InlineMathAllowDigitAfterOpenMarker = true
+	} else if "false" == IMADAOM {
 		engine.InlineMathAllowDigitAfterOpenMarker = false
 	}
 

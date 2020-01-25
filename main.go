@@ -28,14 +28,29 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
 
 	engine := lute.New()
-	codeSyntaxHighlightLineNum := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum"))
-	if "true" == codeSyntaxHighlightLineNum {
+	if "true" == string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum")) {
 		engine.CodeSyntaxHighlightLineNum = true
 	}
-	toc := string(ctx.Request.Header.Peek("X-ToC"))
-	if "true" == toc {
+	if "true" == string(ctx.Request.Header.Peek("X-ToC")) {
 		engine.ToC = true
 	}
+
+	if "false" == string(ctx.Request.Header.Peek("X-Footnotes")) {
+		engine.Footnotes = false
+	}
+	if "false" == string(ctx.Request.Header.Peek("X-AutoSpace")) {
+		engine.AutoSpace = false
+	}
+	if "false" == string(ctx.Request.Header.Peek("X-FixTermTypo")) {
+		engine.FixTermTypo = false
+	}
+	if "false" == string(ctx.Request.Header.Peek("X-ChinesePunct")) {
+		engine.ChinesePunct = false
+	}
+	if "false" == string(ctx.Request.Header.Peek("X-IMADAOM")) {
+		engine.InlineMathAllowDigitAfterOpenMarker = false
+	}
+
 	html, err := engine.Markdown("", body)
 	if nil != err {
 		ctx.SetStatusCode(fasthttp.StatusInternalServerError)

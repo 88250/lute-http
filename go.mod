@@ -8,7 +8,7 @@ require (
 	github.com/klauspost/compress v1.9.8 // indirect
 	github.com/mattn/go-isatty v0.0.12 // indirect
 	github.com/valyala/fasthttp v1.8.0
-	golang.org/x/sys v0.0.0-20200122134326-e047566fdf82 // indirect
+	golang.org/x/sys v0.0.0-20200124204421-9fbb57f87de9 // indirect
 	gopkg.in/yaml.v2 v2.2.8 // indirect
 )
 

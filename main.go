@@ -102,6 +102,21 @@ func handleMarkdownFormat(ctx *fasthttp.RequestCtx) {
 	ctx.SetBody(formatted)
 }
 
+// handleHtml 处理 HTML 转 Markdown。
+// POST 请求 Body 传入 HTML；响应 Body 是处理好的 HTML。
+func handleHtml(ctx *fasthttp.RequestCtx) {
+	body := ctx.PostBody()
+
+	engine := lute.New()
+	html, err := engine.HTML2Markdown(gulu.Str.FromBytes(body))
+	if nil != err {
+		ctx.SetStatusCode(fasthttp.StatusInternalServerError)
+		logger.Errorf("html [%s] to markdown failed: %s\n", body, err.Error())
+		return
+	}
+	ctx.SetBody(gulu.Str.ToBytes(html))
+}
+
 // handle 处理请求分发。
 func handle(ctx *fasthttp.RequestCtx) {
 	switch string(ctx.Path()) {
@@ -109,6 +124,8 @@ func handle(ctx *fasthttp.RequestCtx) {
 		handleMarkdown2HTML(ctx)
 	case "/format":
 		handleMarkdownFormat(ctx)
+	case "/html":
+		handleHtml(ctx)
 	default:
 		ctx.SetStatusCode(fasthttp.StatusNotFound)
 	}

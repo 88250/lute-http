@@ -34,6 +34,13 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 		engine.CodeSyntaxHighlightLineNum = false
 	}
 
+	CodeSyntaxHighlightDetectLang := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightDetectLang"))
+	if "true" == CodeSyntaxHighlightDetectLang {
+		engine.CodeSyntaxHighlightDetectLang = true
+	} else if "false" == CodeSyntaxHighlightDetectLang {
+		engine.CodeSyntaxHighlightDetectLang = false
+	}
+
 	ToC := string(ctx.Request.Header.Peek("X-ToC"))
 	if "true" == ToC {
 		engine.ToC = true

@@ -83,12 +83,7 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 		engine.InlineMathAllowDigitAfterOpenMarker = false
 	}
 
-	html, err := engine.Markdown("", body)
-	if nil != err {
-		ctx.SetStatusCode(fasthttp.StatusInternalServerError)
-		logger.Errorf("markdown text [%s] failed: %s\n", body, err.Error())
-		return
-	}
+	html := engine.Markdown("", body)
 	ctx.SetBody(html)
 }
 

@@ -93,12 +93,7 @@ func handleMarkdownFormat(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
 
 	engine := lute.New()
-	formatted, err := engine.Format("", body)
-	if nil != err {
-		ctx.SetStatusCode(fasthttp.StatusInternalServerError)
-		logger.Errorf("format markdown text [%s] failed: %s\n", body, err.Error())
-		return
-	}
+	formatted := engine.Format("", body)
 	ctx.SetBody(formatted)
 }
 

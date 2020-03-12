@@ -119,6 +119,8 @@ func handleHtml(ctx *fasthttp.RequestCtx) {
 
 // handle 处理请求分发。
 func handle(ctx *fasthttp.RequestCtx) {
+	defer gulu.Panic.Recover(nil)
+
 	switch string(ctx.Path()) {
 	case "/", "":
 		handleMarkdown2HTML(ctx)

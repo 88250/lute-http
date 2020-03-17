@@ -136,7 +136,7 @@ func main() {
 	logger.Infof("booting Lute HTTP on [%s]", addr)
 	server := &fasthttp.Server{
 		Handler:            handle,
-		MaxRequestBodySize: 1024 * 1024 * 2, // 2MB
+		MaxRequestBodySize: 1024 * 1024 * 4, // 4MB
 	}
 	err := server.ListenAndServe(addr)
 	if nil != err {

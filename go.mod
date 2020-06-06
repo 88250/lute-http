@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/88250/gulu v1.1.0
-	github.com/88250/lute v1.4.4
-	github.com/klauspost/compress v1.10.6 // indirect
-	github.com/valyala/fasthttp v1.13.1
+	github.com/88250/lute v1.4.5
+	github.com/klauspost/compress v1.10.8 // indirect
+	github.com/valyala/fasthttp v1.14.0
 )

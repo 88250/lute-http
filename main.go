@@ -83,6 +83,13 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 		engine.InlineMathAllowDigitAfterOpenMarker = false
 	}
 
+	ParagraphBeginningSpace := string(ctx.Request.Header.Peek("X-ParagraphBeginningSpace"))
+	if "true" == ParagraphBeginningSpace {
+		engine.ChineseParagraphBeginningSpace = true
+	} else if "false" == ParagraphBeginningSpace {
+		engine.ChineseParagraphBeginningSpace = false
+	}
+
 	html := engine.Markdown("", body)
 	ctx.SetBody(html)
 }

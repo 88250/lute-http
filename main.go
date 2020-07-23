@@ -11,7 +11,10 @@
 package main
 
 import (
+	"encoding/json"
+	"github.com/88250/lute/util"
 	"os"
+	"strings"
 
 	"github.com/88250/gulu"
 	"github.com/88250/lute"
@@ -20,11 +23,30 @@ import (
 
 var logger = gulu.Log.NewLogger(os.Stdout)
 
+// handleTextBundle 处理 Markdown TextBundle。
+// POST 请求 Body 传入 Markdown 原文；响应 Body 是 TextBundle 化后的 Markdown 文本。
+func handleTextBundle(ctx *fasthttp.RequestCtx) {
+	body := ctx.PostBody()
+	engine := lute.New()
+	linkPrefixesStr := string(ctx.Request.Header.Peek("X-TextBundle-LinkPrefixes"))
+	linkPrefixes := strings.Split(linkPrefixesStr, ",")
+	md, links := engine.TextBundleStr("", util.BytesToStr(body), linkPrefixes)
+	result := map[string]interface{}{
+		"markdown":      md,
+		"originalLinks": links,
+	}
+	resultBody, err := json.Marshal(result)
+	if nil != err {
+		ctx.Response.SetStatusCode(500)
+		return
+	}
+	ctx.SetBody(resultBody)
+}
+
 // handleMarkdown2HTML 处理 Markdown 转 HTML。
 // POST 请求 Body 传入 Markdown 原文；响应 Body 是处理好的 HTML。
 func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
-
 	engine := lute.New()
 
 	CodeSyntaxHighlightLineNum := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum"))
@@ -98,7 +120,6 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 // POST 请求 Body 传入 Markdown 原文；响应 Body 是格式化好的 Markdown 文本。
 func handleMarkdownFormat(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
-
 	engine := lute.New()
 	formatted := engine.Format("", body)
 	ctx.SetBody(formatted)
@@ -108,7 +129,6 @@ func handleMarkdownFormat(ctx *fasthttp.RequestCtx) {
 // POST 请求 Body 传入 HTML；响应 Body 是处理好的 HTML。
 func handleHtml(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
-
 	engine := lute.New()
 	html, err := engine.HTML2Markdown(gulu.Str.FromBytes(body))
 	if nil != err {
@@ -122,7 +142,6 @@ func handleHtml(ctx *fasthttp.RequestCtx) {
 // handle 处理请求分发。
 func handle(ctx *fasthttp.RequestCtx) {
 	defer gulu.Panic.Recover(nil)
-
 	switch string(ctx.Path()) {
 	case "/", "":
 		handleMarkdown2HTML(ctx)
@@ -130,6 +149,8 @@ func handle(ctx *fasthttp.RequestCtx) {
 		handleMarkdownFormat(ctx)
 	case "/html":
 		handleHtml(ctx)
+	case "/textbundle":
+		handleTextBundle(ctx)
 	default:
 		ctx.SetStatusCode(fasthttp.StatusNotFound)
 	}
@@ -138,7 +159,6 @@ func handle(ctx *fasthttp.RequestCtx) {
 // Lute 的 HTTP Server 入口点。
 func main() {
 	gulu.Log.SetLevel("info")
-
 	addr := ":8249"
 	logger.Infof("booting Lute HTTP on [%s]", addr)
 	server := &fasthttp.Server{

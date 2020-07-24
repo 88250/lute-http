@@ -40,6 +40,7 @@ func handleTextBundle(ctx *fasthttp.RequestCtx) {
 		ctx.Response.SetStatusCode(500)
 		return
 	}
+	ctx.Response.Header.SetContentType("application/json; charset=utf-8")
 	ctx.SetBody(resultBody)
 }
 

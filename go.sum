@@ -1,7 +1,9 @@
 github.com/88250/gulu v1.1.2 h1:zgnftJgG4knQ97EPwDhQRKCgos40qRIafTWgGcP5EG4=
 github.com/88250/gulu v1.1.2/go.mod h1:a2POIziN+QFeNT4Mj7FHH2lz1HEaFlMRF6wPE0NHM4U=
-github.com/88250/lute v1.6.7-0.20201123142332-2ef3327bdb55 h1:zLxy88+dir/UdYuiEiGTsvf3245Js6TWGyJBrG9xSHs=
-github.com/88250/lute v1.6.7-0.20201123142332-2ef3327bdb55/go.mod h1:APx6IhxzrUGJqmIalKYomjVLrO4yw/PzEBUtYxpMrfk=
+github.com/88250/lute v1.7.0 h1:HKlcTxc2Pds5VuLYMJ4QZjZ052wMMbhMXXqPp7lh+1U=
+github.com/88250/lute v1.7.0/go.mod h1:APx6IhxzrUGJqmIalKYomjVLrO4yw/PzEBUtYxpMrfk=
+github.com/88250/lute v1.7.1-0.20201219080924-cfb5e9fe20e4 h1:P3LOqiafhQZH/IbE8TErpj+XYDZnHd5fV+ygwpZzqFE=
+github.com/88250/lute v1.7.1-0.20201219080924-cfb5e9fe20e4/go.mod h1:APx6IhxzrUGJqmIalKYomjVLrO4yw/PzEBUtYxpMrfk=
 github.com/alecthomas/assert v0.0.0-20170929043011-405dbfeb8e38 h1:smF2tmSOzy2Mm+0dGI2AIUHY+w0BUc+4tn40djz7+6U=
 github.com/alecthomas/assert v0.0.0-20170929043011-405dbfeb8e38/go.mod h1:r7bzyVFMNntcxPZXK3/+KdruV1H5KSlyVY0gc+NgInI=
 github.com/alecthomas/chroma v0.8.2 h1:x3zkuE2lUk/RIekyAJ3XRqSCP4zwWDfcw/YJCuCAACg=
@@ -61,8 +63,8 @@ github.com/stretchr/testify v1.6.1 h1:hDPOHmpOpP40lSULcqw7IrRb/u7w6RpDC9399XyoNd
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/valyala/bytebufferpool v1.0.0 h1:GqA5TC/0021Y/b9FG4Oi9Mr3q7XYx6KllzawFIhcdPw=
 github.com/valyala/bytebufferpool v1.0.0/go.mod h1:6bBcMArwyJ5K/AmCkWv1jt77kVWyCJ6HpOuEn7z0Csc=
-github.com/valyala/fasthttp v1.17.0 h1:P8/koH4aSnJ4xbd0cUUFEGQs3jQqIxoDDyRQrUiAkqg=
-github.com/valyala/fasthttp v1.17.0/go.mod h1:jjraHZVbKOXftJfsOYoAjaeygpj5hr8ermTRJNroD7A=
+github.com/valyala/fasthttp v1.18.0 h1:IV0DdMlatq9QO1Cr6wGJPVW1sV1Q8HvZXAIcjorylyM=
+github.com/valyala/fasthttp v1.18.0/go.mod h1:jjraHZVbKOXftJfsOYoAjaeygpj5hr8ermTRJNroD7A=
 github.com/valyala/tcplisten v0.0.0-20161114210144-ceec8f93295a/go.mod h1:v3UYOV9WzVtRmSR+PDvWpU/qWl4Wa5LApYYX4ZtKbio=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=

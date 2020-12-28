@@ -52,65 +52,58 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 
 	CodeSyntaxHighlightLineNum := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum"))
 	if "true" == CodeSyntaxHighlightLineNum {
-		engine.CodeSyntaxHighlightLineNum = true
+		engine.SetCodeSyntaxHighlightLineNum(true)
 	} else if "false" == CodeSyntaxHighlightLineNum {
-		engine.CodeSyntaxHighlightLineNum = false
+		engine.SetCodeSyntaxHighlightLineNum(false)
 	}
 
 	CodeSyntaxHighlightDetectLang := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightDetectLang"))
 	if "true" == CodeSyntaxHighlightDetectLang {
-		engine.CodeSyntaxHighlightDetectLang = true
+		engine.SetCodeSyntaxHighlightDetectLang(true)
 	} else if "false" == CodeSyntaxHighlightDetectLang {
-		engine.CodeSyntaxHighlightDetectLang = false
+		engine.SetCodeSyntaxHighlightDetectLang(true)
 	}
 
 	ToC := string(ctx.Request.Header.Peek("X-ToC"))
 	if "true" == ToC {
-		engine.ToC = true
+		engine.SetToC(true)
 	} else if "false" == ToC {
-		engine.ToC = false
+		engine.SetToC(false)
 	}
 
 	Footnotes := string(ctx.Request.Header.Peek("X-Footnotes"))
 	if "true" == Footnotes {
-		engine.Footnotes = true
+		engine.SetFootnotes(true)
 	} else if "false" == Footnotes {
-		engine.Footnotes = false
+		engine.SetFootnotes(false)
 	}
 
 	AutoSpace := string(ctx.Request.Header.Peek("X-AutoSpace"))
 	if "true" == AutoSpace {
-		engine.AutoSpace = true
+		engine.SetAutoSpace(true)
 	} else if "false" == AutoSpace {
-		engine.AutoSpace = false
+		engine.SetAutoSpace(false)
 	}
 
 	FixTermTypo := string(ctx.Request.Header.Peek("X-FixTermTypo"))
 	if "true" == FixTermTypo {
-		engine.FixTermTypo = true
+		engine.SetFixTermTypo(true)
 	} else if "false" == FixTermTypo {
-		engine.FixTermTypo = false
-	}
-
-	ChinesePunct := string(ctx.Request.Header.Peek("X-ChinesePunct"))
-	if "true" == ChinesePunct {
-		engine.ChinesePunct = true
-	} else if "false" == ChinesePunct {
-		engine.ChinesePunct = false
+		engine.SetFixTermTypo(false)
 	}
 
 	IMADAOM := string(ctx.Request.Header.Peek("X-IMADAOM"))
 	if "true" == IMADAOM {
-		engine.InlineMathAllowDigitAfterOpenMarker = true
+		engine.SetInlineMathAllowDigitAfterOpenMarker(true)
 	} else if "false" == IMADAOM {
-		engine.InlineMathAllowDigitAfterOpenMarker = false
+		engine.SetInlineMathAllowDigitAfterOpenMarker(false)
 	}
 
 	ParagraphBeginningSpace := string(ctx.Request.Header.Peek("X-ParagraphBeginningSpace"))
 	if "true" == ParagraphBeginningSpace {
-		engine.ChineseParagraphBeginningSpace = true
+		engine.SetChineseParagraphBeginningSpace(true)
 	} else if "false" == ParagraphBeginningSpace {
-		engine.ChineseParagraphBeginningSpace = false
+		engine.SetChineseParagraphBeginningSpace(false)
 	}
 
 	html := engine.Markdown("", body)

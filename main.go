@@ -92,6 +92,13 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 		engine.SetFixTermTypo(false)
 	}
 
+	HeadingID := string(ctx.Request.Header.Peek("X-HeadingID"))
+	if "true" == HeadingID {
+		engine.SetHeadingID(true)
+	} else if "false" == HeadingID {
+		engine.SetHeadingID(false)
+	}
+
 	IMADAOM := string(ctx.Request.Header.Peek("X-IMADAOM"))
 	if "true" == IMADAOM {
 		engine.SetInlineMathAllowDigitAfterOpenMarker(true)

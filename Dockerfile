@@ -5,7 +5,7 @@ ENV GO111MODULE=on
 RUN apk add --no-cache gcc musl-dev git && go build -i -v
 
 FROM alpine:latest
-LABEL maintainer="Liang Ding<d@b3log.org>"
+LABEL maintainer="Liang Ding<845765@qq.com>"
 WORKDIR /opt/lute-http/
 COPY --from=GO_BUILD /go/src/github.com/88250/lute-http/lute-http /opt/lute-http/lute-http
 RUN apk add --no-cache ca-certificates tzdata

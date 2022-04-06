@@ -3,14 +3,14 @@ module github.com/88250/lute-http
 go 1.12
 
 require (
-	github.com/88250/gulu v1.1.73
-	github.com/88250/lute v1.7.4-0.20211120184537-628ec6501c13
-	github.com/alecthomas/chroma v0.9.4 // indirect
-	github.com/andybalholm/brotli v1.0.4 // indirect
-	github.com/gopherjs/gopherjs v0.0.0-20211111143520-d0d5ecc1a356 // indirect
-	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/klauspost/compress v1.13.6 // indirect
-	github.com/valyala/fasthttp v1.31.0
+	github.com/88250/gulu v1.2.0
+	github.com/88250/lute v1.7.4-0.20220406142316-7dbf59db0e71
+	github.com/klauspost/compress v1.15.1 // indirect
+	github.com/kr/text v0.2.0 // indirect
+	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
+	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
+	github.com/valyala/fasthttp v1.35.0
+	gopkg.in/check.v1 v1.0.0-20200902074654-038fdea0a05b // indirect
 )
 
 //replace github.com/88250/lute => D:\gogogo\src\github.com\88250\lute

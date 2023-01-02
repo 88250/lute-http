@@ -12,12 +12,12 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/88250/lute/util"
 	"os"
 	"strings"
 
 	"github.com/88250/gulu"
 	"github.com/88250/lute"
+	"github.com/88250/lute/util"
 	"github.com/valyala/fasthttp"
 )
 
@@ -27,7 +27,7 @@ var logger = gulu.Log.NewLogger(os.Stdout)
 // POST 请求 Body 传入 Markdown 原文；响应 Body 是 TextBundle 化后的 Markdown 文本。
 func handleTextBundle(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
-	engine := lute.New()
+	engine := newLute()
 	linkPrefixesStr := string(ctx.Request.Header.Peek("X-TextBundle-LinkPrefixes"))
 	linkPrefixes := strings.Split(linkPrefixesStr, ",")
 	md, links := engine.TextBundleStr("", util.BytesToStr(body), linkPrefixes)
@@ -48,7 +48,7 @@ func handleTextBundle(ctx *fasthttp.RequestCtx) {
 // POST 请求 Body 传入 Markdown 原文；响应 Body 是处理好的 HTML。
 func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
-	engine := lute.New()
+	engine := newLute()
 
 	CodeSyntaxHighlightLineNum := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum"))
 	if "true" == CodeSyntaxHighlightLineNum {
@@ -121,7 +121,8 @@ func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 // POST 请求 Body 传入 Markdown 原文；响应 Body 是格式化好的 Markdown 文本。
 func handleMarkdownFormat(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
-	engine := lute.New()
+	engine := newLute()
+	engine.ParseOptions.ImgPathAllowSpace = true
 	formatted := engine.Format("", body)
 	ctx.SetBody(formatted)
 }
@@ -130,7 +131,7 @@ func handleMarkdownFormat(ctx *fasthttp.RequestCtx) {
 // POST 请求 Body 传入 HTML；响应 Body 是处理好的 HTML。
 func handleHtml(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
-	engine := lute.New()
+	engine := newLute()
 	html, err := engine.HTML2Markdown(gulu.Str.FromBytes(body))
 	if nil != err {
 		ctx.SetStatusCode(fasthttp.StatusInternalServerError)
@@ -170,4 +171,10 @@ func main() {
 	if nil != err {
 		logger.Fatalf("booting Lute HTTP server failed: %s", err.Error())
 	}
+}
+
+func newLute() (ret *lute.Lute) {
+	ret = lute.New()
+	ret.ParseOptions.ImgPathAllowSpace = true
+	return
 }

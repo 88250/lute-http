@@ -11,7 +11,6 @@
 package main
 
 import (
-	"bytes"
 	"encoding/json"
 	"os"
 	"strings"
@@ -50,9 +49,9 @@ func handleTextBundle(ctx *fasthttp.RequestCtx) {
 func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
 
-	if bytes.Contains(body, []byte("测试发布到链滴")) {
-		logger.Infof("body: %s", body)
-	}
+	//if bytes.Contains(body, []byte("测试 lute-http")) {
+	//	logger.Infof("body: %s", body)
+	//}
 
 	engine := newLute()
 

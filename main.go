@@ -11,6 +11,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"os"
 	"strings"
@@ -48,6 +49,11 @@ func handleTextBundle(ctx *fasthttp.RequestCtx) {
 // POST 请求 Body 传入 Markdown 原文；响应 Body 是处理好的 HTML。
 func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
+
+	if bytes.Contains(body, []byte("测试发布到链滴")) {
+		logger.Infof("body: %s", body)
+	}
+
 	engine := newLute()
 
 	CodeSyntaxHighlightLineNum := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum"))

@@ -49,10 +49,6 @@ func handleTextBundle(ctx *fasthttp.RequestCtx) {
 func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
 
-	//if bytes.Contains(body, []byte("测试 lute-http")) {
-	//	logger.Infof("body: %s", body)
-	//}
-
 	engine := newLute()
 
 	CodeSyntaxHighlightLineNum := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum"))

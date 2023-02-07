@@ -2,7 +2,7 @@ FROM golang:alpine as GO_BUILD
 WORKDIR /go/src/github.com/88250/lute-http/
 ADD . /go/src/github.com/88250/lute-http/
 ENV GO111MODULE=on
-RUN apk add --no-cache gcc musl-dev git && go build -i -v
+RUN apk add --no-cache gcc musl-dev git && go build -v
 
 FROM alpine:latest
 LABEL maintainer="Liang Ding<845765@qq.com>"

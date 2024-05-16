@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/88250/gulu v1.2.3-0.20240505150113-bc43bd50f866
-	github.com/88250/lute v1.7.7-0.20240516015552-3172f9331067
+	github.com/88250/lute v1.7.7-0.20240516024110-dcef2b80957e
 	github.com/klauspost/compress v1.17.8 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect

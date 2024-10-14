@@ -6,18 +6,18 @@ toolchain go1.23.1
 
 require (
 	github.com/88250/gulu v1.2.3-0.20240612035750-c9cf5f7a4d02
-	github.com/88250/lute v1.7.7-0.20240930090541-cf9ad3552938
+	github.com/88250/lute v1.7.7-0.20241014033420-59a8c9c122ff
 	github.com/valyala/fasthttp v1.56.0
 )
 
 require (
 	github.com/alecthomas/chroma v0.10.0 // indirect
-	github.com/andybalholm/brotli v1.1.0 // indirect
+	github.com/andybalholm/brotli v1.1.1 // indirect
 	github.com/dlclark/regexp2 v1.11.4 // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
-	github.com/klauspost/compress v1.17.10 // indirect
+	github.com/klauspost/compress v1.17.11 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	golang.org/x/text v0.18.0 // indirect
+	golang.org/x/text v0.19.0 // indirect
 )
 
 //replace github.com/88250/lute => D:\gogogo\src\github.com\88250\lute

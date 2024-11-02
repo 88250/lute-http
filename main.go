@@ -49,6 +49,14 @@ func handleTextBundle(ctx *fasthttp.RequestCtx) {
 func handleMarkdown2HTML(ctx *fasthttp.RequestCtx) {
 	body := ctx.PostBody()
 	engine := newLute()
+
+	CodeSyntaxHighlight := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlight"))
+	if "true" == CodeSyntaxHighlight {
+		engine.SetCodeSyntaxHighlight(true)
+	} else if "false" == CodeSyntaxHighlight {
+		engine.SetCodeSyntaxHighlight(false)
+	}
+
 	CodeSyntaxHighlightLineNum := string(ctx.Request.Header.Peek("X-CodeSyntaxHighlightLineNum"))
 	if "true" == CodeSyntaxHighlightLineNum {
 		engine.SetCodeSyntaxHighlightLineNum(true)

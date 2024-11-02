@@ -6,7 +6,7 @@ toolchain go1.23.1
 
 require (
 	github.com/88250/gulu v1.2.3-0.20240612035750-c9cf5f7a4d02
-	github.com/88250/lute v1.7.7-0.20241014033420-59a8c9c122ff
+	github.com/88250/lute v1.7.7-0.20241102053749-a0880752c7a4
 	github.com/valyala/fasthttp v1.56.0
 )
 

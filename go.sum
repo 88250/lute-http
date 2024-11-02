@@ -1,7 +1,7 @@
 github.com/88250/gulu v1.2.3-0.20240612035750-c9cf5f7a4d02 h1:3e5+yobj655pTeKOYMbJrnc1mE51ZkbXIxquTYZuYCY=
 github.com/88250/gulu v1.2.3-0.20240612035750-c9cf5f7a4d02/go.mod h1:MUfzyfmbPrRDZLqxc7aPrVYveatTHRfoUa5TynPS0i8=
-github.com/88250/lute v1.7.7-0.20241014033420-59a8c9c122ff h1:yh3HI5oER2KXHG4UtAW6zJmeGPTsP+RkaOKpYmhIzy4=
-github.com/88250/lute v1.7.7-0.20241014033420-59a8c9c122ff/go.mod h1:VDAzL8b+oCh+e3NAlmwwLzC53ten0rZlS8NboB7ljtk=
+github.com/88250/lute v1.7.7-0.20241102053749-a0880752c7a4 h1:LEDeXpgAjr4Sy5l2Ap1g/u7fZSRFimNtNtSO3MXvrt4=
+github.com/88250/lute v1.7.7-0.20241102053749-a0880752c7a4/go.mod h1:VDAzL8b+oCh+e3NAlmwwLzC53ten0rZlS8NboB7ljtk=
 github.com/alecthomas/chroma v0.10.0 h1:7XDcGkCQopCNKjZHfYrNLraA+M7e0fMiJ/Mfikbfjek=
 github.com/alecthomas/chroma v0.10.0/go.mod h1:jtJATyUxlIORhUOFNA9NZDWGAQ8wpxQQqNSB4rjA/1s=
 github.com/andybalholm/brotli v1.1.1 h1:PR2pgnyFznKEugtsUo0xLdDop5SKXd5Qf5ysW+7XdTA=

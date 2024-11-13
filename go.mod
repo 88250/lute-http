@@ -17,7 +17,7 @@ require (
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/klauspost/compress v1.17.11 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	golang.org/x/text v0.19.0 // indirect
+	golang.org/x/text v0.20.0 // indirect
 )
 
 //replace github.com/88250/lute => D:\gogogo\src\github.com\88250\lute

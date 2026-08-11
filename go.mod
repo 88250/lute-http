@@ -1,12 +1,10 @@
 module github.com/88250/lute-http
 
-go 1.24.0
-
-toolchain go1.24.4
+go 1.26
 
 require (
 	github.com/88250/gulu v1.2.3-0.20251107023402-569f52804e3b
-	github.com/88250/lute v1.7.7-0.20251109054349-0e510b5f4e94
+	github.com/88250/lute v1.7.7-0.20260811085300-b24d536d2061
 	github.com/valyala/fasthttp v1.68.0
 )
 

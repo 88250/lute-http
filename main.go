@@ -182,6 +182,7 @@ func main() {
 
 func newLute() (ret *lute.Lute) {
 	ret = lute.New()
+	ret.SetCallout(true)
 	ret.ParseOptions.ImgPathAllowSpace = true
 	return
 }
